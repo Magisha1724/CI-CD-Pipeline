@@ -1,0 +1,30 @@
+public class CICDProcess {
+    public static void main(String[] args) {
+        System.out.println("Step 1: Compiling Java code...");
+        
+        boolean compileSuccess = simulateJavaCompile();
+        if (!compileSuccess) {
+            System.out.println("Java compilation failed!");
+            return;
+        }
+        System.out.println("Java compilation successful.");
+        
+        System.out.println("Step 2: Building Docker image...");
+        simulateDockerBuild();
+        System.out.println("Docker build simulated.");
+        
+        System.out.println("CI/CD pipeline completed.");
+    }
+    
+    // Simulate Java compile step
+    private static boolean simulateJavaCompile() {
+        // Simulate success (always true here)
+        return true;
+    }
+    
+    // Simulate Docker build step
+    private static void simulateDockerBuild() {
+        // Just simulate delay or prints for Docker build
+        System.out.println("(Simulated) docker build -t my-app:latest .");
+    }
+}
